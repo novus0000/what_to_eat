@@ -3,16 +3,19 @@
 $mysqli = new mysqli('localhost', 'gyrjs07', 'ektgha730!', 'gyrjs07');
 $conn = mysqli_connect('localhost', 'gyrjs07', 'ektgha730!', 'gyrjs07');
 
-$json = file_get_contents('php://input');
-$data_back = json_decode($json);
 
 
-switch($data_back->{"mode"}){
+if (mysqli_connect_errno($conn))
+{
+  echo "데이터베이스 연결 실패: " . mysqli_connect_error();
+}
+
+switch($_GET["mode"]){
     case 'insert':
 
         echo "insert is done";
         break;
-a
+
     case 'delete':
 
         echo "delet is done";     
@@ -24,15 +27,26 @@ a
         break;
 
         case 'new':
-            for($q1 = 0; $q1 < count($_GET["gocoder"]); $q1++) {
-                for($q2 = 0; $q2 < count($_GET["gocoder"]); $q2++) {
-                    for($q3 = 0; $q3 < count($_GET["gocoder"]); $q3++) {
-                        for($q4 = 0; $q4 < count($_GET["gocoder"]); $q4++) {
-                            for($q5 = 0; $q4 < count($_GET["gocoder"]); $q4++) {
-                                for($q6 = 0; $q4 < count($_GET["gocoder"]); $q4++) {
-                                    for($q7 = 0; $q4 < count($_GET["gocoder"]); $q4++) {
-                                        
-                                        mysqli_query( $conn, 'DELETE FROM tb_task WHERE suburb = $suburb AND lot = $lot');                                         d
+            $FOOD = $mysqli -> real_escape_string($_POST["FOOD"]);
+            $Q1 = $_POST["Q1"];
+            $Q2 = $_POST["Q2"];
+            $Q3 = $_POST["Q3"];
+            $Q4 = $_POST["Q4"];
+            $Q5 = $_POST["Q5"];
+            $Q6 = $_POST["Q6"];
+            $Q7 = $_POST["Q7"]; 
+
+            for($q1 = 0; $q1 < count($Q1); $q1++) {
+                for($q2 = 0; $q2 < count($Q2); $q2++) {
+                    for($q3 = 0; $q3 < count($Q3); $q3++) {
+                        for($q4 = 0; $q4 < count($Q4); $q4++) {
+                            for($q5 = 0; $q5 < count($Q5); $q5++) {
+                                for($q6 = 0; $q6 < count($Q6); $q6++) {
+                                    for($q7 = 0; $q7 < count($Q7); $q7++) {
+                                        echo "added";
+                                        mysqli_query( $conn, "INSERT INTO tb_food_list (FOOD, Q1, 
+                                        Q2, Q3, Q4, Q5, Q6, Q7) VALUES ('$FOOD', '$Q1[$q1]', '$Q2[$q2]', '$Q3[$q3]', '$Q4[$q4]', '$Q5[$q5]' ,'$Q6[$q6]', '$Q7[$q7]')");
+                                                                              
 
                                     }    
                                 }    
@@ -40,13 +54,9 @@ a
                         }
                     }
                 }
-                echo $i."번째 value 값 :".$_GET["gocoder"][$i]."<Br>";    
             }
             
-            $suburb = $mysqli -> real_escape_string($data_back->{"suburb"});
-            $lot = $mysqli -> real_escape_string($data_back->{"lot"});
-            mysqli_query( $conn, 'DELETE FROM tb_task WHERE suburb = $suburb AND lot = $lot'); 
-            echo "new is done";     
+   
             break;
 }
 ?>
