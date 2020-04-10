@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+
+            <script language="javascript">
+                function goToNextPage(link, paraAdd){
+                    var para = document.location.search;
+                    location.href = link + para +"&" + paraAdd;
+                }
+            </script>
+
+    </head>
+    <body>
+
+         Q3 : Select the below Answer <br>
+        <a href="javascript:goToNextPage('./Q4.html','Q3=1')">A1</a> <br>
+        <a href="javascript:goToNextPage('./Q4.html','Q3=2')">A2</a> <br>
+        <a href="javascript:goToNextPage('./Q4.html','Q3=3')">A3</a> <br>
+
+    </body>
+</html>
