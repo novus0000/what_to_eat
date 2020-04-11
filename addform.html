@@ -4,6 +4,9 @@
         <meta charset="utf-8"/>
         
         <script language="javascript">
+
+            // this function is used to check 'at least one answer', if not it gives alert!
+
             function check(){
                 var Qarray = new Array("Q1[]","Q2[]","Q3[]","Q4[]", "Q5[]", "Q6[]", "Q7[]");
                 for (q=0; q<7; q++){
@@ -28,10 +31,15 @@
     </head>   
     <body>
         
-        <form name = "form" action="../process.php?mode=new" method="POST">
+        <form name = "form" action="./process.php?mode=new" method="POST">
             <fieldset style = "width:50">
                 <legend>음식추가</legend>
-            <p>음식이름을 적어주세요(줄임말X 풀네임) <br> <input type="text" name="FOOD" required></p>
+            <p>당신의 '존함'을 적어주세요 <br> <input type="text" name="NAME" required>
+            </p>
+
+            <p>'음식이름'을 적어주세요(풀네임권장) <br> <input type="text" name="FOOD" required>
+            </p>
+
             <p>Q1<br>
                 <input type="checkbox" name="Q1[]" value="1">a1
                 <input type="checkbox" name="Q1[]" value="2">a2
