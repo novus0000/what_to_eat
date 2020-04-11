@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8"/>
 
+         <script src="https://polyfill.io/v3/polyfill.js?features=fetch"></script>
             <script language="javascript">
                 function goToNextPage(link, paraAdd){
                     var para = document.location.search;
@@ -12,15 +13,13 @@
                 // this function is used to ask food to server and take a data with json
                 function returnFood(){
                     var para = document.location.search;
-                    
-                    // const response = fetch("http://gyrjs07.dothome.co.kr/what_to_eat/return_food_list.php?&Q1=1&Q2=1&Q3=1&Q4=1");
                     fetch("http://gyrjs07.dothome.co.kr/what_to_eat/return_food_list.php?&Q1=1&Q2=1&Q3=1&Q4=1")
                     .then(function(response) {
                         return response.json();
                     })
                     .then(function(myJson) {
-                        document.writeln("Your choice is :" + para + ' a \n a');
-                        document.writeln("\n This is the food list of your choice : ");
+                        document.writeln("Your choice is :" + para );
+                        document.writeln("<br>This is the food list of your choice : ");
                         document.write(JSON.stringify(myJson));
                     });
 
