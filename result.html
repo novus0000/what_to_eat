@@ -19,8 +19,8 @@
                         return response.json();
                     })
                     .then(function(myJson) {
-                        document.write("Your choice is :" + para + ' a \n a');
-                        document.write("\n This is the food list of your choice : ");
+                        document.writeln("Your choice is :" + para + ' a \n a');
+                        document.writeln("\n This is the food list of your choice : ");
                         document.write(JSON.stringify(myJson));
                     });
 

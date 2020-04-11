@@ -2,12 +2,30 @@
 <html>
     <head>
         <meta charset="utf-8"/>
+        <script language="javascript">
 
+            // this function is used to ask food to server and take a data with json
+            function returnFood(){
+                var para = document.location.search;
+                fetch("http://gyrjs07.dothome.co.kr/what_to_eat/foodlist.php")
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(myJson) {
+                    document.write(JSON.stringify(myJson));
+                });
+
+                }
+        </script>
     </head>   
+
     <body>
          <br>
         <a href="./admin.html">Back to admin main page</a> <br>
         <a href="./food_list.html">Go to food list </a> <br>
         <a href="./food_detail_list.html">Go to food detail list </a> <br>
+
+        <script>returnFood()</script>;
+
     </body>
 </html>
