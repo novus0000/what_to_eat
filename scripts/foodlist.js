@@ -7,14 +7,16 @@ const fakeApiResponse = [
 
 // this function is used to ask food to server and take a data with json
 function showFoodList() {
+  var title= ["FOOD","Q1","Q2","Q3","Q4","Q5","Q6","Q7", "NAME", "DATE"]
   // Emulate api call to get data
   fetch("http://gyrjs07.dothome.co.kr/what_to_eat/foodlist.php")
   .then(function(response) {
       return response.json();
   })
   .then(function(myJson) {
-      creatTable(myJson);
-  });
+    myJson.splice(0,0,title)
+    creatTable(myJson);
+});
 }
 
 function creatTable(data) {

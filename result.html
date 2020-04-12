@@ -13,7 +13,7 @@
                 // this function is used to ask food to server and take a data with json
                 function returnFood(){
                     var para = document.location.search;
-                    fetch("http://gyrjs07.dothome.co.kr/what_to_eat/return_food_list.php?&Q1=1&Q2=1&Q3=1&Q4=1")
+                    fetch("http://gyrjs07.dothome.co.kr/what_to_eat/return_food_list.php?&"+para)
                     .then(function(response) {
                         return response.json();
                     })
@@ -29,7 +29,6 @@
     </head>
     <body>
         <script>returnFood()</script>;
-        <a href="javascript:returnFood()">Answer</a> <br>;
 
 
     </body>
