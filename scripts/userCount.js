@@ -10,10 +10,10 @@
   }
   
   function showUserCount(data) {
+      
     // Get mountig node from HTML
     const mountingPoind = document.getElementById("user-count");
   
-    // Append table structure to mounting point
     mountingPoind.innerHTML = "이용자 수 : "  + data[0];
   }
   
