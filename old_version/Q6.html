@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+
+            <script language="javascript">
+                function goToNextPage(link, paraAdd){
+                    var para = document.location.search;
+                    location.href = link + para +"&" + paraAdd;
+                }
+            </script>
+
+    </head>
+    <body>
+
+         Q6 : 당신이 지금 등산을 하고 있다면 어느 길로  <br>
+        <a href="./scripts/goToNextPage.js('./Q7.html','Q6=1')">사람들의 발자국이 많은 평탄한 길</a> <br>
+        <a href="javascript:goToNextPage('./Q7.html','Q6=2')">인적이 드물어 보이는 길</a> <br>
+        <a href="javascript:goToNextPage('./Q7.html','Q6=3')">내가 개척하는 숲속의 새로운 길</a> <br>
+
+    </body>
+</html>

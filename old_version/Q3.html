@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+
+            <script language="javascript">
+                function goToNextPage(link, paraAdd){
+                    var para = document.location.search;
+                    location.href = link + para +"&" + paraAdd;
+                }
+            </script>
+
+    </head>
+    <body>
+
+         Q3 : 오늘 하루 고생한 자신에게 선물을 준다면? (조건: 주머니 속 돈)  <br>
+        <a href="javascript:goToNextPage('./Q4.html','Q3=1')">꽃 한 송이</a> <br>
+        <a href="javascript:goToNextPage('./Q4.html','Q3=2')">극장에서 보는 영화 한 편</a> <br>
+        <a href="javascript:goToNextPage('./Q4.html','Q3=3')">예쁜 옷 한 벌 </a> <br>
+        <a href="javascript:goToNextPage('./Q4.html','Q3=3')">한강 뷰가 아름다운 호텔에서의 하루 마무리 </a> <br>
+
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+
+            <script language="javascript">
+                function goToNextPage(link, paraAdd){
+                    var para = document.location.search;
+                    location.href = link + para +"&" + paraAdd;
+                }
+            </script>
+
+    </head>
+    <body>
+
+         Q5 : 오늘 듣고싶은 음악은??? <br>
+        <a href="javascript:goToNextPage('./Q6.html','Q5=1')">내 마음까지 울려줄 발라드</a> <br>
+        <a href="javascript:goToNextPage('./Q6.html','Q5=2')">뼛속까지 트렌디해지는 팝송</a> <br>
+        <a href="javascript:goToNextPage('./Q6.html','Q5=3')">내가 음악인지 음악이 나인지 모를 힙합</a> <br>
+        <a href="javascript:goToNextPage('./Q6.html','Q5=4')">내마음을 차분하게 해줄 클래식</a> <br>
+        <a href="javascript:goToNextPage('./Q6.html','Q5=5')">내가 바로 한류스타 K-POP</a> <br>
+
+    </body>
+</html>

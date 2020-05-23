@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+
+            <script language="javascript">
+                function goToNextPage(link, paraAdd){
+                    var para = document.location.search;
+                    location.href = link + para +"&" + paraAdd;
+                }
+            </script>
+
+    </head>
+    <body>
+
+         <div class = question > </div>Q1 : 오늘 하루 당시 기분을 날씨로표현하면?</div> <br>
+        <a href="javascript:goToNextPage('./Q2.html','Q1=1')">벚꽃이 흩날리는 한강가고 싶은 날씨</a> <br>
+        <a href="javascript:goToNextPage('./Q2.html','Q1=2')">바닷가에서 파티하고 싶은 한여름 밤 날씨</a> <br>
+        <a href="javascript:goToNextPage('./Q2.html','Q1=3')">추적추적 비가 내리는 날씨</a> <br>
+        <a href="javascript:goToNextPage('./Q2.html','Q1=4')">천둥번개폭풍 몰아치는 날씨</a> <br>
+        <a href="javascript:goToNextPage('./Q2.html','Q1=5')">방콕하고 싶은 미세먼지 가득한 날씨</a> <br>
+
+    </body>
+</html>

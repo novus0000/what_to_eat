@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        
+    </head>   
+    <body>
+        <div id="user_info"></div><br>
+        Admin page <br>
+        <a href="./index.html">Back to the main page</a> <br>
+        <a href="./addform.html">Go to add food</a> <br>
+        <a href="http://gyrjs07.dothome.co.kr/what_to_eat/food_list_by_username.php">Go to food list </a> <br>
+        <a href="./food_detail_list.html">Go to food detail list </a> <br>
+
+        <!-- (1) LoginWithNaverId Javscript SDK -->
+	<script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
+<!-- (2) LoginWithNaverId Javscript 설정 정보 및 초기화 -->
+<script>
+    var naverLogin = new naver.LoginWithNaverId(
+        {
+            clientId: "OtJJqf2x1WKkKhcXr_li",
+            callbackUrl: "http://gyrjs07.dothome.co.kr/what_to_eat/admin.html",
+            isPopup: false,
+            callbackHandle: true
+            /* callback 페이지가 분리되었을 경우에 callback 페이지에서는 callback처리를 해줄수 있도록 설정합니다. */
+        }
+    );
+
+    /* (3) 네아로 로그인 정보를 초기화하기 위하여 init을 호출 */
+    naverLogin.init();
+
+    naverLogin.getLoginStatus(function (status) {
+		if (status) {
+			var email = naverLogin.user.getEmail();
+			var name = naverLogin.user.getNickName();
+			var profileImage = naverLogin.user.getProfileImage();
+			var birthday = naverLogin.user.getBirthday();			var uniqId = naverLogin.user.getId();
+            var age = naverLogin.user.getAge();
+            document.getElementById("user_info").innerHTML = email;
+		} else {
+			console.log("AccessToken이 올바르지 않습니다.");
+		}
+    });
+    
+</script>
+
+    </body>
+</html>

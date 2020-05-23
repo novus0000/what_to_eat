@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        
+        <script language="javascript">
+
+            // this function is used to check 'at least one answer', if not it gives alert!
+
+            function check(){
+                document.getElementsByName('txt1')[0].value
+                var Qarray = new Array("Q1[]","Q2[]","Q3[]","Q4[]", "Q5[]", "Q6[]", "Q7[]");
+                for (q=0; q<7; q++){
+                    var form = document.form;
+                    var b=0;
+                    for (i=0; i < form.elements.length; i++) {
+                        if (form.elements[i].name == Qarray[q]) {
+                        if (form.elements[i].checked == true) {
+                        b++;
+                    }
+                    }
+                    }
+                    if(b == 0) {
+                    alert("하나 이상의 답변을 선택하세요!");
+                    return;
+                    }
+            }
+             form.submit();
+            }
+
+            </script>
+    </head>   
+    <body>
+        
+        <form name = "form" action="./process.php?mode=new" method="POST">
+            <fieldset style = "width:50">
+                <legend>음식추가</legend>
+            <p>당신의 '존함'을 적어주세요 <br> <input type="text" name="USERNAME" required>
+            </p>
+
+            <p>'음식이름'을 적어주세요(풀네임권장) <br> <input type="text" name="FOOD" required>
+            </p>
+
+            <br><br>1.오늘 하루 당시 기분을 날씨로표현하면?<br>
+                <input type="checkbox" name="Q1[]" value="1">좋음 -> 벚꽃이 흩날리는 한강가고 싶은 날씨<br>
+                <input type="checkbox" name="Q1[]" value="2">즐거움 -> 바닷가에서 파티하고 싶은 한여름 밤 날씨<br>
+                <input type="checkbox" name="Q1[]" value="3">슬픔 -> 추적추적 비가 내리는 날씨<br>
+                <input type="checkbox" name="Q1[]" value="4">화남 -> 천둥번개폭풍 몰아치는 날씨<br>
+                <input type="checkbox" name="Q1[]" value="5">무기력 ->  방콕하고 싶은 미세먼지 가득한 날씨<br>
+
+                <br><br><p>2. 떠나고 싶은 여행지는?<br>
+                <input type="checkbox" name="Q2[]" value="1">*한복 입고 돌아다니고 싶은 전주한옥마을 /한식<br>
+                <input type="checkbox" name="Q2[]" value="2">산들바람에 벚꽃이 휘날리는 교토/ 일식<br>
+                <input type="checkbox" name="Q2[]" value="3">폭죽이 떠지는 야경이 아름다운 상하이 / 중식<br>
+                <input type="checkbox" name="Q2[]" value="4">낭만적인 사랑을 찾아 떠나는 나폴리 / 양식<br>
+                <input type="checkbox" name="Q2[]" value="5">북적거리는 야시장 속 다낭 / 동남아<br>
+                <input type="checkbox" name="Q2[]" value="6">에펠탑 앞에서 피크닉을 즐기고 싶은 파리/카페디저트</p>     
+                
+                
+                <br><br><p>3. 오늘 하루 고생한 자신에게 선물을 준다면? (조건: 주머니 속 돈)<br>
+                <input type="checkbox" name="Q3[]" value="1">꽃 한 송이<br>
+                <input type="checkbox" name="Q3[]" value="2">극장에서 보는 영화 한 편<br>
+                <input type="checkbox" name="Q3[]" value="3">*예쁜 옷 한 벌<br>
+                <input type="checkbox" name="Q3[]" value="4">한강 뷰가 아름다운 호텔에서의 하루 마무리 </p>
+
+
+                <br><br><p>4. 지금 당신, 햄최몇? <br>
+                <input type="checkbox" name="Q4[]" value="1">반개<br>
+                <input type="checkbox" name="Q4[]" value="2">1개<br>
+                <input type="checkbox" name="Q4[]" value="3">2개 이상<br></p>
+
+            <p><br><br>5.오늘 듣고싶은 음악은???<br>
+                <input type="checkbox" name="Q5[]" value="1">내 마음까지 울려줄 발라드<br>
+                <input type="checkbox" name="Q5[]" value="2">뼛속까지 트렌디해지는 팝송<br>
+                <input type="checkbox" name="Q5[]" value="3">내가 음악인지 음악이 나인지 모를 힙합<br>
+                <input type="checkbox" name="Q5[]" value="4">내마음을 차분하게 해줄 클래식<br>
+                <input type="checkbox" name="Q5[]" value="5">내가 바로 한류스타 K-POP<br></p>         
+
+            <p><br><br>6. 당신이 지금 등산을 하고 있다면 어느 길로 <br>
+                <input type="checkbox" name="Q6[]" value="1">사람들의 발자국이 많은 평탄한 길<br>
+                <input type="checkbox" name="Q6[]" value="2">인적이 드물어 보이는 길<br>
+                <input type="checkbox" name="Q6[]" value="3">내가 개척하는 숲속의 새로운 길<br></p>
+
+                <br><br><p>7. 당신이 데이트를 한다면 하고 싶은 곳은?(인스타 감성)<br>
+                <input type="checkbox" name="Q7[]" value="1">뷰가 아름다운 남산 타워 레스토랑<br>
+                <input type="checkbox" name="Q7[]" value="2">동네 맛집으로 소문난 곱창집<br>
+                <input type="checkbox" name="Q7[]" value="3">한강으로 돗자리 들고피크닉 <br>
+                <input type="checkbox" name="Q7[]" value="4">집에서 영화보면서 배달시켜먹기 <br> </p>
+
+            <p><a href="javascript:check()">제출하기</a></p>         
+            </fieldset>   
+        </form>
+    </body>
+</html>

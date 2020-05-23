@@ -1,0 +1,382 @@
+[
+	{
+		"title": "Q1",
+		"tags": "",
+		"body": "1.오늘 하루 당시 기분을 날씨로표현하면? \n[[벚꽃이 흩날리는 한강가고 싶은 날씨|Q1A1]] \n[[바닷가에서 파티하고 싶은 한여름 밤 날씨|Q1A2]] \n[[추적추적 비가 내리는 날씨|Q1A3]]\n[[천둥번개폭풍 몰아치는 날씨|Q1A4]]\n[[방콕하고 싶은 미세먼지 가득한 날씨|Q1A5]]",
+		"position": {
+			"x": -2021,
+			"y": -1817
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q2",
+		"tags": "",
+		"body": "2. 떠나고 싶은 여행지는?\n[[한복 입고 돌아다니고 싶은 전주한옥마을|Q2A1]]\n[[산들바람에 벚꽃이 휘날리는 교토|Q2A2]]\n[[폭죽이 떠지는 야경이 아름다운 상하이|Q2A3]]\n[[낭만적인 사랑을 찾아 떠나는 나폴리 |Q2A4]]\n[[북적거리는 야시장 속 다낭|Q2A5]]\n[[에펠탑 앞에서 피크닉을 즐기고 싶은 파리|Q2A6]]",
+		"position": {
+			"x": -1327,
+			"y": -1826
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q3",
+		"tags": "",
+		"body": "3. 오늘 하루 고생한 자신에게 선물을 준다면? (조건: 주머니 속 돈)\r\n\r\n[[꽃 한 송이|Q3A1]]\r\n[[극장에서 보는 영화 한 편|Q3A2]]\r\n[[예쁜 옷 한 벌 |Q3A3]]\r\n[[한강 뷰가 아름다운 호텔에서의 하루 마무리 |Q3A4]]\r\n",
+		"position": {
+			"x": -701,
+			"y": -1803
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q4",
+		"tags": "",
+		"body": "4. 지금 당신, 햄최몇?\n[[반개|Q4A1]]\n[[1개|Q4A2]]\n[[2개 이상|Q4A3]]",
+		"position": {
+			"x": -176,
+			"y": -1772
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q5",
+		"tags": "",
+		"body": "5.오늘 듣고싶은 음악은???\n[[내 마음까지 울려줄 발라드|Q5A1]]\n[[뼛속까지 트렌디해지는 팝송|Q5A2]]\n[[내가 음악인지 음악이 나인지 모를 힙합|Q5A3]]\n[[내마음을 차분하게 해줄 클래식|Q5A4]]\n[[내가 바로 한류스타 K-POP|Q5A5]]",
+		"position": {
+			"x": 371,
+			"y": -1788
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q6",
+		"tags": "",
+		"body": "6. 당신이 지금 등산을 하고 있다면 어느 길로 \n[[사람들의 발자국이 많은 평탄한 길|Q6A1]]\n[[인적이 드물어 보이는 길|Q6A2]]\n[[내가 개척하는 숲속의 새로운 길|Q6A3]]",
+		"position": {
+			"x": 887,
+			"y": -1775
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q7",
+		"tags": "",
+		"body": "7. 당신이 데이트를 한다면 하고 싶은 곳은?(인스타 감성)\n[[뷰가 아름다운 남산 타워 레스토랑|Q7A1]]\n[[동네 맛집으로 소문난 곱창집|Q7A2]]\n[[한강으로 돗자리 들고 피크닉 |Q7A3]]\n[[집에서 영화보면서 배달시켜먹기 |Q7A4]]",
+		"position": {
+			"x": 1421,
+			"y": -1778
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q1A1",
+		"tags": "",
+		"body": "<<Q1A1>>  [[Q2]]",
+		"position": {
+			"x": -1628,
+			"y": -2292
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q1A2",
+		"tags": "",
+		"body": "<<Q1A2>> [[Q2]]",
+		"position": {
+			"x": -1633,
+			"y": -2044
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q1A3",
+		"tags": "",
+		"body": "<<Q1A3>> [[Q2]]",
+		"position": {
+			"x": -1636,
+			"y": -1805
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q1A4",
+		"tags": "",
+		"body": "<<Q1A4>> [[Q2]]",
+		"position": {
+			"x": -1639,
+			"y": -1539
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q1A5",
+		"tags": "",
+		"body": "<<Q1A5>> [[Q2]]",
+		"position": {
+			"x": -1653,
+			"y": -1290
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q2A1",
+		"tags": "",
+		"body": "<<Q2A1>>  [[Q3]]",
+		"position": {
+			"x": -1025,
+			"y": -2401
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q2A2",
+		"tags": "",
+		"body": "<<Q2A2>>  [[Q3]]",
+		"position": {
+			"x": -1012,
+			"y": -2165
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q2A3",
+		"tags": "",
+		"body": "<<Q2A3>>  [[Q3]]",
+		"position": {
+			"x": -1017,
+			"y": -1936
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q2A4",
+		"tags": "",
+		"body": "<<Q2A4>>  [[Q3]]",
+		"position": {
+			"x": -1028,
+			"y": -1703
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q2A5",
+		"tags": "",
+		"body": "<<Q2A5>>  [[Q3]]",
+		"position": {
+			"x": -1038,
+			"y": -1481
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q2A6",
+		"tags": "",
+		"body": "<<Q2A6>>  [[Q3]]",
+		"position": {
+			"x": -1033,
+			"y": -1247
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q3A1",
+		"tags": "",
+		"body": "<<Q3A1>>\n[[Q4]]",
+		"position": {
+			"x": -469,
+			"y": -2126
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q3A2",
+		"tags": "",
+		"body": "<<Q3A2>>\n[[Q4]]",
+		"position": {
+			"x": -467,
+			"y": -1886
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q3A3",
+		"tags": "",
+		"body": "<<Q3A3>>\n[[Q4]]",
+		"position": {
+			"x": -459,
+			"y": -1588
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q3A4",
+		"tags": "",
+		"body": "<<Q3A4>>\n[[Q4]]",
+		"position": {
+			"x": -466,
+			"y": -1334
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Q4A1",
+		"tags": "",
+		"body": "<<Q4A1>>\n[[Q5]]",
+		"position": {
+			"x": 90,
+			"y": -2022
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q4A2",
+		"tags": "",
+		"body": "<<Q4A2>>  [[Q5]]",
+		"position": {
+			"x": 87,
+			"y": -1765
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q4A3",
+		"tags": "",
+		"body": "<<Q4A3>>  [[Q5]]",
+		"position": {
+			"x": 80,
+			"y": -1545
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q5A1",
+		"tags": "",
+		"body": "<<Q5A1>> [[Q6]]",
+		"position": {
+			"x": 616,
+			"y": -2324
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q5A2",
+		"tags": "",
+		"body": "<<Q5A2>> [[Q6]]",
+		"position": {
+			"x": 616,
+			"y": -2018
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q5A3",
+		"tags": "",
+		"body": "<<Q5A3>> [[Q6]]",
+		"position": {
+			"x": 617,
+			"y": -1778
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q5A4",
+		"tags": "",
+		"body": "<<Q5A4>> [[Q6]]",
+		"position": {
+			"x": 616,
+			"y": -1542
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q5A5",
+		"tags": "",
+		"body": "<<Q5A5>> [[Q6]]",
+		"position": {
+			"x": 621,
+			"y": -1302
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q6A1",
+		"tags": "",
+		"body": "<<Q6A1>>  [[Q7]]",
+		"position": {
+			"x": 1137,
+			"y": -2040
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q6A2",
+		"tags": "",
+		"body": "<<Q6A2>>  [[Q7]]",
+		"position": {
+			"x": 1135,
+			"y": -1786
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q6A3",
+		"tags": "",
+		"body": "<<Q6A3>>  [[Q7]]",
+		"position": {
+			"x": 1134,
+			"y": -1526
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q7A1",
+		"tags": "",
+		"body": "<<Q7A1>> [[result]]",
+		"position": {
+			"x": 1667,
+			"y": -2107
+		},
+		"colorID": 1
+	},
+	{
+		"title": "Q7A2",
+		"tags": "",
+		"body": "<<Q7A2>>[[result]]",
+		"position": {
+			"x": 1668,
+			"y": -1894
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q7A3",
+		"tags": "",
+		"body": "<<Q7A3>>[[result]]",
+		"position": {
+			"x": 1660,
+			"y": -1658
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Q7A4",
+		"tags": "",
+		"body": "<<Q7A4>>[[result]]",
+		"position": {
+			"x": 1668,
+			"y": -1410
+		},
+		"colorID": 0
+	},
+	{
+		"title": "result",
+		"tags": "",
+		"body": "resultpage",
+		"position": {
+			"x": 2040,
+			"y": -1777
+		},
+		"colorID": 0
+	}
+]

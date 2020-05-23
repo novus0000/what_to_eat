@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+
+         <script src="https://polyfill.io/v3/polyfill.js?features=fetch"></script>
+            <script language="javascript">
+                function goToNextPage(link, paraAdd){
+                    var para = document.location.search;
+                    location.href = link + para +"&" + paraAdd;
+                }
+
+                // this function is used to ask food to server and take a data with json
+                function returnFood(){
+                    var para = document.location.search;
+                    fetch("http://gyrjs07.dothome.co.kr/what_to_eat/return_food_list.php?&"+para)
+                    .then(function(response) {
+                        return response.json();
+                    })
+                    .then(function(myJson) {
+                        document.writeln("Your choice is :" + para );
+                        document.writeln("<br>This is the food list of your choice : ");
+                        document.write(JSON.stringify(myJson));
+                    });
+
+                    }
+            </script>
+
+    </head>
+    <body>
+        <script>returnFood()</script>;
+
+
+    </body>
+</html>
