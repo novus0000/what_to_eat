@@ -16,6 +16,7 @@
         <meta property="og:description"        content="무의식으로 보는 나에게 필요한 음식 테라피" />
         <meta property="og:image"              content="http://gyrjs07.dothome.co.kr/tumb.jpg" />
 
+        <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
             <style>
                 @font-face {
                     font-family: 'SeoulNamsanL';
@@ -29,6 +30,7 @@
                     height: 100%;
                     max-width: 1980px;
                     font-family: 'SeoulNamsanL';
+                    overflow: hidden;
                 }
                 
                 div
@@ -43,7 +45,7 @@
                     text-align: center;
                     position: fixed;
                     width:65%;
-                    top: 10%;
+                    top: 7%;
                     left: 17.5%;
                     
                 }
@@ -55,19 +57,23 @@
                 .text {
                     text-align: justify;
                     position: fixed;
-                    top: 48%;
+                    top: 51%;
                     left: 18%;
                 }
 
-                img {
+                /* img {
                 width: 100%;
                 height: 100%;
                 margin:0; padding:0;
                 vertical-align:bottom;
                 position: fixed;
-                }   
+                }    */
 
-
+                #canvasArea {
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+        }
         </style>
         <style type="text/css">
         ::-webkit-scrollbar {
@@ -85,34 +91,156 @@
         ::-webkit-scrollbar-thumb {
             background-color: rgba(0, 0, 0, .5);
             border-radius: 10px;
-            border: 2px solid #ffffff;
+            /* border: 2px solid #ffffff; */
         }
         
         ::-webkit-scrollbar-track {
-            border-radius: 10px;  
-            background-color: #ffffff; 
+            /* border-radius: 10px;  
+            background-color: #fff8ef;  */
+        }
+        ::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 7px;
+        }
+        ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #E5E5E5;
+        box-shadow: 2px 3px 1px #00000029;;
         }
         </style>
     </head>
 
     <body>
-        <div class="background">
-            <img src="./result.jpg" alt="">
-        </div>
+        
 
+    
+        <div class="background">
+            <img style="width: 100%;  height: 100%;  margin:0; padding:0; vertical-align:bottom;           position: fixed;" src="./result.jpg" alt="">
+        </div>
+        
         <div class="title" id="food_name" style="font-size:large; font-weight:bold;">
             무더운 여름날에 에어컨 켜고, 이불 덮고, 넷플릭스 보면서 즐기는 집콕 엽떡
         </div>
 
         <div style="top:20%;" id="food_img">
-
+            이미지
         </div>
 
 
-        <div class="text" id="food_content" style="overflow:scroll; width:59%; height:30%; padding:10px;background-color: transparent; font-size:small; line-height:200%;">
+        <div class="text" id="food_content" style="overflow:scroll; width:59%; height:30%; padding:10px;background-color: transparent; font-size:small; line-height:200%; overflow-x: hidden; overflow-y: scroll;">
 
-            내용
-            </div>
+        내용
+        </div>
+        
+	
+        <div style="width: 100%; text-align: center; bottom: 5%; position: fixed;">
+            <!--페이스북공유버튼-->
+            <a href="#" onclick="window.open(url_combine_fb, '', 'scrollbars=no, width=600, height=600'); return false;">
+                <img src="./image/facebook.png" title="페이스북으로 공유하기" class="sharebtn_custom" style="width: 32px;"></a>
+            <!--카카오톡공유버튼-->
+            <a href="javascript:;" id="kakao-link-btn">
+                <img src="./image/kakao.png" title="카카오톡으로 공유하기" class="sharebtn_custom" style="width: 32px;"></a>
+            <!--인스타그램공유버튼-->
+            <a href='#' onclick= "action_app_instagram(android_url, ios_url, ios_appstore_url);">
+                <img src="./image/instagram.png" title="인스타그램으로 공유하기" class="sharebtn_custom" style="width: 32px;"></a>
+            <!--트위터공유버튼-->
+            <a href="#" onclick="window.open(url_combine_tw, '', 'scrollbars=no, width=600, height=600'); return false;">
+                <img src="./image/twitter.png" title="트위터로 공유하기" class="sharebtn_custom" style="width: 32px;"></a>
+        </div>
+        <script type="text/javascript">
+            //<![CDATA[
+              // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+              Kakao.init('6ae8263ba1d328dbc6884ebce213dac3');
+              // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+              Kakao.Link.createDefaultButton({
+                container: '#kakao-link-btn',  // 컨테이너는 아까 위에 버튼이 쓰여진 부분 id 
+                objectType: 'feed',
+                content: {  // 여기부터 실제 내용이 들어갑니다. 
+                  title: '음식 심리테스트', // 본문 제목
+                  description: '무의식으로 보는 나에게 필요한 음식 테라피',  // 본문 바로 아래 들어가는 영역?
+                  imageUrl: 'http://gyrjs07.dothome.co.kr/tumb.jpg', // 이미지
+                  link: {
+                    mobileWebUrl: 'http://gyrjs07.dothome.co.kr/what_to_eat/index.html',
+                    webUrl: 'http://gyrjs07.dothome.co.kr/what_to_eat/index.html'
+                  }
+                },
+                social: {  /* 공유하면 소셜 정보도 같이 줄 수 있는데, 이 부분은 기반 서비스마다 적용이 쉬울수도 어려울 수도 있을듯 합니다. 전 연구해보고 안되면 제거할 예정 (망할 google  blogger...) */
+                  likeCount: 286,
+                  commentCount: 45,
+                  sharedCount: 845
+                },
+                buttons: [
+                  {
+                    title: '웹으로 보기',
+                    link: {
+                      mobileWebUrl: 'http://gyrjs07.dothome.co.kr/what_to_eat/index.html',
+                      webUrl: 'http://gyrjs07.dothome.co.kr/what_to_eat/index.html'
+                    }
+                  },
+                  {
+                    title: '앱으로 보기',
+                    link: {
+                      mobileWebUrl: 'http://gyrjs07.dothome.co.kr/what_to_eat/index.html',
+                      webUrl: 'http://gyrjs07.dothome.co.kr/what_to_eat/index.html'
+                    }
+                  }
+                ]
+              });
+            //]]>
+          </script> 
+
+	<script type="text/javascript">
+
+	var url_this_page = location.href; 
+	var title_this_page = document.title;
+
+	var url_default_fb = "https://www.facebook.com/sharer/sharer.php?u=";
+	var url_combine_fb = url_default_fb + encodeURIComponent(url_this_page);
+
+	var url_default_tw_txt = "https://twitter.com/intent/tweet?text="; 
+	var url_default_tw_url = "&url=";
+	var url_combine_tw = url_default_tw_txt + document.title + url_default_tw_url + encodeURIComponent(url_this_page);
+
+	var android_url  = 'intent://instagram.com/#Intent;package=com.instagram.android;scheme=https;end';
+	var ios_url = 'instagram://media';
+	var ios_appstore_url = 'https://itunes.apple.com/kr/app/instagram/id389801252?mt=8'
+	
+	function mo_chk(){
+		var os;
+		var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));	 
+		if (mobile) {
+			var userAgent = navigator.userAgent.toLowerCase();
+			if (userAgent.search("android") > -1){
+					return os = "android";
+				}else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1) || (userAgent.search("ipad") > -1)){
+					return os = "ios";
+				}else{
+					return os = "otehr";
+				}
+		} else {
+			return os = "pc";
+		}
+	}
+
+
+	function action_app_instagram(android_url , ios_url , ios_appstore_url){
+		var result_mo_chk = mo_chk();
+
+		if(result_mo_chk!="pc"){
+			if(result_mo_chk == "ios"){
+
+			setTimeout( function() {
+				window.open(ios_appstore_url);
+			}, 1500);
+
+			location.href = ios_url;
+			}else{
+			location.href = android_url;
+			}
+		}
+	}
+	</script>
+
             <script language="javascript"> 
 
                 var result={
@@ -167,9 +295,9 @@
                         food_content:"바쁜 하루를 보내고 선선한 바람을 맞으며 집으로 돌아가는 길, 뭔가 이대로 집에 돌아가기는 아쉬운 마음이 드는 날들이 있습니다. 만족스러운 하루를 보낸 후 맞이한 여유를 만끽하고픈 마음에 집으로 가는 발걸음은 더디기만 하죠. 그러던 와중 파전 집에서 들려오는 사람들의 왁자지껄한 웃음소리에 걸음이 멈칫하진 않았나요? 갓 부친 따끈따끈한 해물파전에 막걸리 한 잔과 함께 하루를 시원하게 마무리해보는 거 어때요? <br />.<br /><br />알고 계셨나요? <br />우리는 비가 오는 날이면 막걸리에 파전을 찾고는 합니다. 왜 일까죠? 그 이유는 날씨 탓이라는 의견이 지배적이라고 해요. 식물만 광합성을 하는게 아니라 인간도 광합성을 해서, 일조량이 줄어들면 생체리듬을 조절하는 호르몬인 '멜라토닌'은 증가하고, '세라토닌'이라는 신경전달물질은 줄어들게 된다고 하네요..",
                     },
                     r11:{
-                        food_name:"foodnamesample",
-                        food_img:"r1",
-                        food_content:"foodnamesample",
+                        food_name:"화려한 데코레이션으로 당신의 눈까지 즐겁게 할 파스타",
+                        food_img:"r11",
+                        food_content:"나는 음악을 들으면 내적 댄스가 절로 나올 것 같은 신나는 하루! 꼭 특별한 이벤트가 있는 건 아니라도 하루하루의 소소한 행복의 기억들이 있다면 그것으로도 마음이 한층 풍요로워지는 것 같아요. 오늘의 작지만 소중한 행복을 기념하기 위해서 보기만 해도 기분 좋아지는 예쁜 파스타로 배를 채워보는 건 어때요?<br /><br />알고계셨나요? <br /><br />가끔 파스타의 면이 덜 익은 것 같다고 느낀 적이 있으신가요? 하지만 그건 면이 덜 익어서 그런 것이 아니였을지도 몰라요. 19세기 후반부터 나폴리를 중심으로 중간에 심을 살짝 남기고 삶는 ‘알 덴테’ 방식이 널리 퍼졌다고 해요. 이러한 방식으로 삶게되면 면이 살짝 딱딱하게 느껴질 수 있는데 이 때 물을 조금 뿌리고 랩을 씌워 전자레인지에 가열하면 부드러워진답니다. ",
                     },
                     r12:{
                         food_name:"피로를 싹 씻어 줄 수제맥주",
@@ -192,9 +320,9 @@
                         food_content: "바쁜 하루를 보내고 선선한 바람을 맞으며 집으로 돌아가는 길, 뭔가 이대로 집에 돌아가기는 아쉬운 마음이 드는 날들이 있습니다. 만족스러운 하루를 보낸 후 맞이한 여유를 만끽하고픈 마음에 집으로 가는 발걸음은 더디기만 하죠. 그러던 와중 반짝반짝 빛나는 횟집의 네온사인의 당신의 눈을 사로잡지는 않았나요? 횟집에서 소주 한 잔 기울이며 시원하게 하루를 마무리 하는 거 어떤가요?<br /><br />알고 계셨나요? <br />다이어트 하시는 분들이 ‘회는 살이 안찐다’라고 하는 말은 과연 사실일까요? 네 맞습니다. 회는 불에 굽는 과정을 거치지 않기 때문에 소화가 잘 되지 않아 그 탓에 영양소의 흡수율이 낮다는 이유입니다. 포만감은 있는데 칼로리는 그에 비해 더 낮은점도 좋은 다이어트 식품인 이유 중 하나겠네요.<br />",
                     },
                     r16:{
-                        food_name:"foodnamesample",
+                        food_name:"우아하고 고풍스럽게! 육즙 가득 A+ 스테이크 ",
                         food_img:"r16",
-                        food_content:"foodnamesample",
+                        food_content:"반복되는 일상에서 벗어나 영화 속 주인공 같은 하루를 살아보고 싶은 당신, 화려한 도시의 조명을 내려다보며 사색에 잠겨보는 시간을 가져보는 것도 좋을 것 같아요. 그런 분위기를 내는데는 음식만한 게 또 없죠. 입에서 살살 녹는 스테이크 한 점 썰면서 생각에 잠겨보는 거 어때요?<br /><br />알고계셨나요? <br /><br />스테이크를 레어로 시킬 경우 피가 뚝뚝 떨어지는 것을 싫어하는 사람들이 많은데 사실 이 빨간 액체는 피가 아니랍니다! 스테이크의 피는 원래 도살장에서 제거하기 때문이죠. 이 빨간 액체는 미오글로빈 때문인데, 이는 열을 받으면 갈색이 되는 성질이 있어 웰던 스테이크에서는 갈색 액체가 흘러나오는 것이랍니다!",
                     },
 
                     r17:{
@@ -269,7 +397,7 @@
                   document.all("food_name").innerHTML=result[para]["food_name"];
                 }
                 function change_img(para){
-                  document.all("food_img").innerHTML="<img src='./food/"+para+".png' style= 'width: 35%; height: auto; top:23%; left:33%;' alt=''>";
+                  document.all("food_img").innerHTML="<img src='./food/"+para+".png' style= 'margin:0; padding:0; vertical-align:bottom; position: fixed; width: 37%; height: auto; top:22%; left:32%;' alt='''>";
                 }
                 function change_content(para){
                   document.all("food_content").innerHTML=result[para]["food_content"];
