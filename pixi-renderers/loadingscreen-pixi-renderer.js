@@ -9,12 +9,12 @@ gdjs.LoadingScreenPixiRenderer = function(runtimeGamePixiRenderer, loadingScreen
   this._loadingScreen = new PIXI.Container();
 
   this._progressText = new PIXI.Text(' ', {
-    fontSize: '50px',
+    fontSize: '40px',
     fontFamily: 'Arial',
-    fill: '#FFFFFF',
+    fill: '#000000',
     align: 'center',
   });
-  this._loadingScreen.addChild(this._progressText);
+  
 
   if (loadingScreenSetup && loadingScreenSetup.showGDevelopSplash) {
     this._madeWithText = new PIXI.Text('', {
@@ -24,7 +24,7 @@ gdjs.LoadingScreenPixiRenderer = function(runtimeGamePixiRenderer, loadingScreen
       align: 'center',
     });
     this._madeWithText.position.y = this._pixiRenderer.height / 2 - 130;
-    this._websiteText = new PIXI.Text('.', {
+    this._websiteText = new PIXI.Text('', {
       fontSize: '30px',
       fontFamily: 'Arial',
       fill: '#FFFFFF',
@@ -32,16 +32,17 @@ gdjs.LoadingScreenPixiRenderer = function(runtimeGamePixiRenderer, loadingScreen
     });
     this._websiteText.position.y = this._pixiRenderer.height / 2 + 100;
 
-    this._splashImage = new PIXI.Sprite.fromImage("./loading.jpg");
-    this._splashImage.position.x = this._pixiRenderer.width / 2;
-    this._splashImage.position.y = this._pixiRenderer.height / 2;
-    this._splashImage.anchor.x = 0.5;
-    this._splashImage.anchor.y = 0.5;
-    this._splashImage.scale.x = this._pixiRenderer.width;
-    this._splashImage.scale.y = this._pixiRenderer.height;
+    this._splashImage = new PIXI.Sprite.fromImage("./loading_background.jpg");
+    this._splashImage.position.x = 0;
+    this._splashImage.position.y = 0;
+    this._splashImage.anchor.x = 0;
+    this._splashImage.anchor.y = 0;
+    this._splashImage.height = this._pixiRenderer.height*1.0;
+    this._splashImage.width = this._pixiRenderer.width*1.0;
     this._loadingScreen.addChild(this._splashImage);
     this._loadingScreen.addChild(this._madeWithText);
     this._loadingScreen.addChild(this._websiteText);
+    this._loadingScreen.addChild(this._progressText);
   }
 };
 
@@ -70,13 +71,10 @@ gdjs.LoadingScreenPixiRenderer.prototype.render = function(percent) {
       this._pixiRenderer.height - this._websiteText.height - screenBorder;
   }
 
-  this._progressText.text = percent + '%';
-  this._progressText.position.x = this._pixiRenderer.width / 2 - this._madeWithText.width / 2 - 50;
+  this._progressText.text = "";
+  this._progressText.position.x = this._pixiRenderer.width/2;
   this._progressText.position.y =
-  this._pixiRenderer.height / 2 -
-  this._splashImage.height / 2 -
-  this._madeWithText.height -
-  20;
+    (this._pixiRenderer.height - this._progressText.height)/2;
 
   this._pixiRenderer.render(this._loadingScreen);
 };
